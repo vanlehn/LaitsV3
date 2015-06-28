@@ -9,8 +9,8 @@ Dragoon will support the following activities:
 * Construction Activity
 * Execution Activity
 * Automated Execution Activity
-* Up and Down Activity
-* Automated Up and Down Activity
+* Tweak Activity
+* Automated Tweak Activity
 
 ### Construction Activity
 The construction activity is identical to traditional Dragoon problems.  Construction activities can be done in author mode, or any of the student modes.
@@ -23,9 +23,9 @@ In the execution activity, the student is given the model and executes its calcu
 * To observe closely how the values of a particular model are calculated (?)
 
 #### Workflow
-All nodes which the author marked as "in model" and "optional" (?) will appear on the canvas.  The appearance of a node will depend on its type:
+All nodes which the author marked as "in model" and "optional" will appear on the canvas.  The appearance of a node will depend on its type:
 * Parameters 
-  * All fields are filled in corretly by the system at the start; the student will never need to modify parameters
+  * All fields are filled in correctly by the system at the start; the student will never need to modify parameters
   * Solid green border
   * Interior of the node shows the value and units (in all cases in this document, units appear only when entered by author)
   * Clicking on the node opens the node editor with all fields disabled (uneditable)
@@ -39,8 +39,10 @@ All nodes which the author marked as "in model" and "optional" (?) will appear o
     * The units
   * Clicking on the node opens the node editor with all fields disabled and filled in with author's values except for a new field called "current value" which the student must fill in.
     * We will need to either allow expressions or some rounding factor or some other scaffolding so that students do not get the answer wrong because they rounded differently than the system.
-  * The expression field is always given, however it will be hidden initially and may be revealed by clicking on it.
-  * After the current value is filled in:
+    * Even better would be to make the Current Value box be a drop-down menu that is populated with the correct value and enticing incorrect values (traditionally called "foils").  Foils should be generated automatically by combining the node's inputs in incorrect ways (e.g., - instead of +) or using values from other nodes in the model with the same units.
+  * The expression field is always given, however it will be hidden initially and may be revealed by clicking on it.  Seeing this click in the log file will indicates that the student needed a little extra help on this node.
+  * After the current value is filled un, the Current Value widget may turn color.  
+  * When the node editor is closed:
     * The node border becomes solid, and depending on the feedback mode may become colored as well.
     * Arrows leaving that node will be highlighted (depending on the feedback mode ?)
 
